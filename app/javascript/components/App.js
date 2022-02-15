@@ -1,19 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route } from 'react-router';
 import HelloWorld from "./HelloWorld";
-import configureStore from "../configureStore";
+
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path='/' render={() => ('Home!')} />
-            <Route path='/hello' render={() => <HelloWorld grerting='Friend' />} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<HelloWorld greeting='Friend' />} />
+        </Routes>
+      </Router>
     );
   }
 }
