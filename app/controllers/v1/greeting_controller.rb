@@ -1,5 +1,6 @@
 class V1::GreetingController < ApplicationController
   def index
-    render json: Greeting.all
+    id = rand(1..Greeting.count)
+    render json: Greeting.find(id)
   end
 end
