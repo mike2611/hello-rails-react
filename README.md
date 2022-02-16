@@ -2,7 +2,7 @@
 
 # Hello Rails-React
 
-> THello World using ReactJs and RoR.
+> Hello World using ReactJs and RoR.
 
 ## Built With
 
